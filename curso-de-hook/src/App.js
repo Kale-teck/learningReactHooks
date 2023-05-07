@@ -18,14 +18,15 @@ function App() {
       fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(resposta => resposta.json())
         .then(dados => {
-          setEndereco(enderecoAntigo => ({
-            ...enderecoAntigo,
+          setEndereco(enderecoAntigo => {
+            return {...enderecoAntigo,
             cep: dados.cep,
             cidade: dados.localidade,
             estado: dados.uf,
             ddd: dados.ddd
-          }))
+          }
         })
+      })
     }
   }
 
