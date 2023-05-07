@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react'
 
@@ -33,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <input placeholder='Digite o CEP' onChange={manipulaEndereco}/>
+        <input placeholder='Digite o CEP' onChange={manipulaEndereco} className='campoTexto' />
         <ul>
           <li>
             CEP: {endereco.cep}
